@@ -140,7 +140,7 @@ console.log(names[0]);
 */
 ///////////////////////////////////////////////////////////
 
-var wycieczka ={
+var wycieczkaKamila ={
 
   paidMoney: [124,48,268,18,42],
   a:[],
@@ -153,7 +153,7 @@ var wycieczka ={
       this.a.push(this.paidMoney[i]* 0.2);
       this.b.push((this.paidMoney[i]) + (this.a[i]));
 }
-else if (this.paidMoney>=50) {
+else if (this.paidMoney>=50 && this.paidMoney<200) {
   this.a.push(this.paidMoney[i]* 0.15);
   this.b.push((this.paidMoney[i]) + (this.a[i]));
   }
@@ -167,7 +167,45 @@ else if (this.paidMoney>=50) {
 
 }
 
-wycieczka.calculateTip();
+wycieczkaKamila.calculateTip();
 
-console.log(wycieczka.a);
-console.log(wycieczka.b);
+console.log(wycieczkaKamila.a);
+console.log(wycieczkaKamila.b);
+
+
+/*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+
+
+
+
+var wycieczkaKarola ={
+
+  paidMoney: [77,375,110,45],
+  a:[],
+  b:[],
+  calculateTip: function(){
+
+    for(i=0;i<this.paidMoney.length;i++)
+  {
+    if(this.paidMoney[i]<100){
+      this.a.push(this.paidMoney[i]* 0.2);
+      this.b.push((this.paidMoney[i]) + (this.a[i]));
+}
+else if (this.paidMoney>=100 && this.paidMoney<300) {
+  this.a.push(this.paidMoney[i]* 0.1);
+  this.b.push((this.paidMoney[i]) + (this.a[i]));
+  }
+  else {
+    this.a.push(this.paidMoney[i]* 0.25);
+    this.b.push((this.paidMoney[i]) + (this.a[i]));
+  }
+    }
+  return this.a,this.b;
+                          }
+
+}
+
+wycieczkaKarola.calculateTip();
+
+console.log(wycieczkaKarola.a);
+console.log(wycieczkaKarola.b);
