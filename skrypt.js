@@ -147,15 +147,27 @@ var wycieczka ={
   b:[],
   calculateTip: function(){
 
-    for(i=0;i<paidMoney.length;i++)
+    for(i=0;i<this.paidMoney.length;i++)
   {
-      a.push(paidMoney[i]* 0.2);
-      b.push(paidMoney[i] + a);
-
+    if(this.paidMoney[i]<50){
+      this.a.push(this.paidMoney[i]* 0.2);
+      this.b.push((this.paidMoney[i]) + (this.a[i]));
+}
+else if (this.paidMoney>=50) {
+  this.a.push(this.paidMoney[i]* 0.15);
+  this.b.push((this.paidMoney[i]) + (this.a[i]));
+  }
+  else {
+    this.a.push(this.paidMoney[i]* 0.1);
+    this.b.push((this.paidMoney[i]) + (this.a[i]));
+  }
     }
-  return a,b;
+  return this.a,this.b;
                           }
 
 }
 
-console.log(wycieczka.calculateTip);
+wycieczka.calculateTip();
+
+console.log(wycieczka.a);
+console.log(wycieczka.b);
