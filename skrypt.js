@@ -1,5 +1,4 @@
-/*var name = "Kamil";
-var number = 50;
+/*var name = "Kamil"; var number = 50;
 
 alert("BIIIIIIIIIIIITCHHHHH PPPPPLLLLLEEEEEEASSSSEEEEE");
 var pytanie = prompt("niga u mad?");
@@ -127,15 +126,36 @@ console.log(a+paidTips[0],b+paidTips[1],c+paidTips[2]);
 */
 
 ///////////////////Objects//////////////////////
+/*
 
-var john={
-  firstName: 'John',
-  lastName: 'Smith',
-  birthYear: 1990,
-  family: ['Jane', 'Mark', 'Bob', 'Emily'],
-  job: 'teacher',
-  isMarried: false
-};
+var name = ['alfred'];
 
-console.log(john.firstName);
-console.log(john['family']);
+console.log(name[0]);
+
+
+var names = ['John'];
+
+console.log(names[0]);
+
+*/
+///////////////////////////////////////////////////////////
+
+var wycieczka ={
+
+  paidMoney: [124,48,268,18,42],
+  a:[],
+  b:[],
+  calculateTip: function(){
+
+    for(i=0;i<paidMoney.length;i++)
+  {
+      a.push(paidMoney[i]* 0.2);
+      b.push(paidMoney[i] + a);
+
+    }
+  return a,b;
+                          }
+
+}
+
+console.log(wycieczka.calculateTip);
