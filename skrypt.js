@@ -209,3 +209,26 @@ wycieczkaKarola.calculateTip();
 
 console.log(wycieczkaKarola.a);
 console.log(wycieczkaKarola.b);
+
+
+var sexy = [52,34,85,67,78];
+
+function policzonko(sumthing){
+
+var a =0;
+
+for(i=0; i<sumthing.length;i++)
+
+{
+ a = a +sumthing[i];
+
+}
+
+
+return a/sumthing.length;
+}
+
+
+
+console.log(policzonko(wycieczkaKarola.a));
+console.log(policzonko(wycieczkaKamila.a));
