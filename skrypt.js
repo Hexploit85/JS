@@ -1,3 +1,116 @@
+///////////////////////IFFE - Data privacy in JS///////////////////
+/*
+
+(function (){
+  var a = 15;
+  console.log(a);
+})
+
+();
+console.log(a);
+
+
+*/
+///////////////FIRST CLASS FUNCTION (returna  function from function)/////////////////
+
+
+/*
+function pytaniaKwalifikacyjne(stanowisko){
+  if (stanowisko === 'SCCM'){
+    return function(imie){
+      console.log (imie + ' opisz swoje doswiadczenie z SCCMem ');
+    }
+  }else if (stanowisko === 'AD') {
+      return function(imie){
+      console.log( imie + ' co to jest GPO');}
+  }else{
+    return function(imie){
+      console.log (imie +', powiedz czym sie zajmowales poprzednio');
+    }
+  }
+}
+
+var SCCM = pytaniaKwalifikacyjne('SCCM');
+
+SCCM('Marek');
+*/
+
+
+
+
+
+
+//////FUNCTION THAT USES FUNCTION AS AN INPUT/////////////
+/*
+var lata =[1985,2020,2030,1900,5000,1000];
+
+function policz (arr, fn){
+
+    var arrRes =[];
+    for (var i=0; i <arr.length; i++){
+      arrRes.push(fn(arr[i]));
+    }
+    return arrRes;
+};
+
+function calculateAge(el) {
+  return 2018 - el;
+}
+
+
+var costam = policz (lata, calculateAge;
+
+console.log(costam);
+
+*/
+
+////////////////PROTOTYPY//////////////////
+/*
+var newProto = function(name, year, score, nickname){
+
+  this.name = name;
+  this.year = year;
+  this.score = score;
+  this.nickname = nickname;
+
+};
+
+newProto.prototype.nowafunkcja = function(){
+  console.log(this.name + ' ma ksywke ' + this.nickname);
+}
+
+
+
+
+var Albert = new newProto('Albert', 1985, 2000, 'nullbyte');
+var Norbert = new newProto('Norbert', 1985, 2000, 'Norbi');
+var Sebek = new newProto('Sebastian', 1985, 2000, 'Sebcio');
+
+newProto.prototype.costam = 'hexed';
+
+console.log(Albert.costam);
+console.log(Norbert.costam);
+*/
+
+//Pusty konstruktor funckcji
+
+/*
+var costamgdziestam = function(){
+};
+
+//zmienna prototypowa
+costamgdziestam.prototype.name = 'null';
+
+//nowy objekt z prototypu
+var einstein = new costamgdziestam;
+console.log(einstein.name);
+*/
+
+
+
+
+
+
 /*var name = "Kamil"; var number = 50;
 
 alert("BIIIIIIIIIIIITCHHHHH PPPPPLLLLLEEEEEEASSSSEEEEE");
@@ -139,7 +252,7 @@ console.log(names[0]);
 
 */
 ///////////////////////////////////////////////////////////
-
+/*
 var wycieczkaKamila ={
 
   paidMoney: [124,48,268,18,42],
@@ -172,10 +285,10 @@ wycieczkaKamila.calculateTip();
 console.log(wycieczkaKamila.a);
 console.log(wycieczkaKamila.b);
 
-
+*/
 /*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
 
-
+/*
 
 
 var wycieczkaKarola ={
@@ -232,3 +345,4 @@ return a/sumthing.length;
 
 console.log(policzonko(wycieczkaKarola.a));
 console.log(policzonko(wycieczkaKamila.a));
+*/
