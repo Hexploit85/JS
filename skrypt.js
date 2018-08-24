@@ -1,3 +1,41 @@
+///////////////////////Sort/////////////////
+var doPosortowania= [34, 6636,43, 13 ,864, 4533, 4, 53,2, 75476, 8, 642, 125 ,176, 09];
+var posortowane =[];
+
+
+
+
+function sortowanie(zbior){
+
+          var a;
+          var b;
+
+          for( i = 0; i < zbior.length; i++){
+              if (zbior[i]>zbior[i+1]){
+                a =zbior[i];
+                b =zbior[i+1];
+                zbior[i] = b;
+                zbior[i+1] = a;
+               console.log(zbior);
+              };
+          };
+
+
+};
+
+while(doPosortowania.length != posortowane.length){
+  sortowanie(doPosortowania);
+}
+
+//sortowanie(doPosortowania);
+console.log(posortowane);
+//console.log(doPosortowania[doPosortowania.length-1]);
+
+
+
+
+
+
 ///////////////////////IFFE - Data privacy in JS///////////////////
 /*
 
