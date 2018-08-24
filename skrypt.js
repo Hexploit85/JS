@@ -3,21 +3,22 @@
 
 function pytaniaKwalifikacyjne(stanowisko){
   return function(imie){
-  if (stanowisko === 'SCCM')
+      if (stanowisko === 'SCCM')
   {
-    console.log (imie + ' opisz swoje doswiadczenie z SCCMem ');
+          console.log (imie + ' opisz swoje doswiadczenie z SCCMem ');
     }
-  else if (stanowisko === 'AD')
+      else if (stanowisko === 'AD')
   {
 
-      console.log( imie + ' co to jest GPO');
+          console.log( imie + ' co to jest GPO');
   }
-  else
+      else
   {
         console.log (imie +', powiedz czym sie zajmowales poprzednio');
 
   }
-}};
+}
+};
 
 pytaniaKwalifikacyjne('wachlarz')('Jacek');
 
