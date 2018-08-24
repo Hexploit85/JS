@@ -1,3 +1,27 @@
+/////////////////////////CLOSURES/////////////////////////////////////////////
+
+
+function pytaniaKwalifikacyjne(stanowisko){
+  return function(imie){
+  if (stanowisko === 'SCCM')
+  {
+    console.log (imie + ' opisz swoje doswiadczenie z SCCMem ');
+    }
+  else if (stanowisko === 'AD')
+  {
+
+      console.log( imie + ' co to jest GPO');
+  }
+  else
+  {
+        console.log (imie +', powiedz czym sie zajmowales poprzednio');
+
+  }
+}};
+
+pytaniaKwalifikacyjne('wachlarz')('Jacek');
+
+
 ///////////////////////IFFE - Data privacy in JS///////////////////
 /*
 
@@ -13,8 +37,8 @@ console.log(a);
 */
 ///////////////FIRST CLASS FUNCTION (returna  function from function)/////////////////
 
-
 /*
+
 function pytaniaKwalifikacyjne(stanowisko){
   if (stanowisko === 'SCCM'){
     return function(imie){
@@ -33,13 +57,16 @@ function pytaniaKwalifikacyjne(stanowisko){
 var SCCM = pytaniaKwalifikacyjne('SCCM');
 
 SCCM('Marek');
+
+pytaniaKwalifikacyjne('AD')('Jedrek');
+
+
+
+
+
+
+
 */
-
-
-
-
-
-
 //////FUNCTION THAT USES FUNCTION AS AN INPUT/////////////
 /*
 var lata =[1985,2020,2030,1900,5000,1000];
