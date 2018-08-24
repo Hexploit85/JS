@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-/////////////////////////CLOSURES/////////////////////////////////////////////
 
+/////////////////////////CLOSURES/////////////////////////////////////////////
+/*
 
 function pytaniaKwalifikacyjne(stanowisko){
   return function(imie){
@@ -22,18 +22,18 @@ function pytaniaKwalifikacyjne(stanowisko){
 };
 
 pytaniaKwalifikacyjne('wachlarz')('Jacek');
-=======
+ */
 ///////////////////////Sort/////////////////
 var doPosortowania= [34, 6636,43, 13 ,864, 4533, 4, 53,2, 75476, 8, 642, 125 ,176, 09];
 var posortowane =[];
-
-
+var c;
 
 
 function sortowanie(zbior){
 
           var a;
           var b;
+
 
           for( i = 0; i < zbior.length; i++){
               if (zbior[i]>zbior[i+1]){
@@ -42,24 +42,25 @@ function sortowanie(zbior){
                 zbior[i] = b;
                 zbior[i+1] = a;
                console.log(zbior);
+               c++;
               };
           };
 
 
 };
 
-while(doPosortowania.length != posortowane.length){
-  sortowanie(doPosortowania);
+while(doPosortowania.length != c){
+ sortowanie(doPosortowania);
 }
 
 //sortowanie(doPosortowania);
-console.log(posortowane);
+//console.log(posortowane);
 //console.log(doPosortowania[doPosortowania.length-1]);
 
 
 
 
->>>>>>> b8e31975f0fa008caf3de5fd5f357cce07366e11
+
 
 
 ///////////////////////IFFE - Data privacy in JS///////////////////
@@ -125,7 +126,7 @@ function calculateAge(el) {
 }
 
 
-var costam = policz (lata, calculateAge;
+var costam = policz (lata, calculateAge);
 
 console.log(costam);
 
