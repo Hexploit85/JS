@@ -1,4 +1,18 @@
 
+var question = function(pytanie,odpowiedz, poprawnaOdpowiedz) {
+   this.pytanie = pytanie;
+   this.odpowiedz = odpowiedz;
+   this.poprawnaOdpowiedz = poprawnaOdpowiedz;
+};
+
+var kosmos = new question('Jak nazywa sie ksiezyc Saturna?',['1. Tytan', '2.Pluto', '3.Donald'],'Tytan' );
+var hacking = new question ('Ktora z wymienionych odpowiedzi jest malwarem', ['1.Hippo', '2.Trojan', '3.Kotek'],"Trojan");
+var muzyka = new question ('Co nie jest gatunkiem muzycznym',['1.Triphop','2. Beatdrop','3.Elektronika'], 'Beatdrop');
+
+console.log(kosmos, hacking, muzyka);
+
+
+
 /////////////////////////CLOSURES/////////////////////////////////////////////
 /*
 
@@ -24,6 +38,7 @@ function pytaniaKwalifikacyjne(stanowisko){
 pytaniaKwalifikacyjne('wachlarz')('Jacek');
  */
 ///////////////////////Sort/////////////////
+/*
 var doPosortowania= [34, 6636,43, 13 ,864, 4533, 4, 53,2, 75476, 8, 642, 125 ,176, 09];
 var posortowane =[];
 var c;
@@ -62,7 +77,7 @@ while(doPosortowania.length != c){
 
 
 
-
+*/
 ///////////////////////IFFE - Data privacy in JS///////////////////
 /*
 
