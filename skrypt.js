@@ -9,14 +9,15 @@ var kosmos = new question('Jak nazywa sie ksiezyc Saturna?',['1. Tytan', '2.Plut
 var hacking = new question ('Ktora z wymienionych odpowiedzi jest malwarem', ['1.Hippo', '2.Trojan', '3.Kotek'],"Trojan");
 var muzyka = new question ('Co nie jest gatunkiem muzycznym',['1.Triphop','2. Beatdrop','3.Elektronika'], 'Beatdrop');
 
-var zestawPytan =[kosmos, hacking, muzyka];
+var zestawPytan =[kosmos.pytanie, hacking.pytanie, muzyka.pytanie];
 
 
-question.prototype.odpowiedzUzytkownika = function(){
+//question.prototype.odpowiedzUzytkownika =
+var somex = function(){
   prompt(zestawPytan[Math.floor(Math.random()*3)]);
 };
 
-console.log(zestawPytan );
+somex();
 
 //question.odpowiedzUzytkownika();
 //console.log(question.odpowiedzUzytkownika);
