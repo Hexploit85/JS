@@ -9,18 +9,32 @@ var kosmos = new question('Jak nazywa sie ksiezyc Saturna?',['1. Tytan', '2.Plut
 var hacking = new question ('Ktora z wymienionych odpowiedzi jest malwarem', ['1.Hippo', '2.Trojan', '3.Kotek'],"Trojan");
 var muzyka = new question ('Co nie jest gatunkiem muzycznym',['1.Triphop','2. Beatdrop','3.Elektronika'], 'Beatdrop');
 
-var zestawPytan =[kosmos.pytanie, hacking.pytanie, muzyka.pytanie];
+var zestawPytan =[kosmos, hacking, muzyka];
 
 
-//question.prototype.odpowiedzUzytkownika =
-var somex = function(){
-  prompt(zestawPytan[Math.floor(Math.random()*3)]);
+question.prototype.odpowiedzUzytkownika =function(){
+  console.log(this.pytanie, this.odpowiedz);
 };
 
-somex();
+question.prototype.losowaLiczba = function(a){
+  a = Math.floor(Math.random()*3);
+  return a;
+};
 
-//question.odpowiedzUzytkownika();
-//console.log(question.odpowiedzUzytkownika);
+question.prototype.wylosowanePytanie = function(){
+    zestawPytan[this.losowaLiczba()].odpowiedzUzytkownika();
+};
+
+var yup = new question();
+yup.wylosowanePytanie();
+
+
+
+//var wylosowanePytanie = zestawPytan[Math.floor(Math.random()*3)].odpowiedzUzytkownika();
+//var odpowiedzNaPytanie =prompt('Wybierz prawidlowa odpowiedz');
+
+//if(odpowiedzNaPytanie === wylosowane )
+//console.log(wylosowanePytanie);
 
 
 
