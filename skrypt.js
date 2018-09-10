@@ -28,6 +28,7 @@ question.prototype.wylosowanePytanie = function(){
 var yup = new question();
 yup.wylosowanePytanie();
 
+if()
 
 
 //var wylosowanePytanie = zestawPytan[Math.floor(Math.random()*3)].odpowiedzUzytkownika();
