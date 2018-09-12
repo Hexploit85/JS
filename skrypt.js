@@ -3,39 +3,62 @@ var question = function(pytanie,odpowiedz, poprawnaOdpowiedz) {
    this.pytanie = pytanie;
    this.odpowiedz = odpowiedz;
    this.poprawnaOdpowiedz = poprawnaOdpowiedz;
+
+
 };
 
-var kosmos = new question('Jak nazywa sie ksiezyc Saturna?',['1. Tytan', '2.Pluto', '3.Donald'],'Tytan' );
-var hacking = new question ('Ktora z wymienionych odpowiedzi jest malwarem', ['1.Hippo', '2.Trojan', '3.Kotek'],"Trojan");
-var muzyka = new question ('Co nie jest gatunkiem muzycznym',['1.Triphop','2. Beatdrop','3.Elektronika'], 'Beatdrop');
+var kosmos = new question('Jak nazywa sie ksiezyc Saturna?',['1. Tytan', '2.Pluto', '3.Donald'],'1. Tytan' );
+var hacking = new question ('Ktora z wymienionych odpowiedzi jest malwarem', ['1.Hippo', '2.Trojan', '3.Kotek'],"2.Trojan");
+var muzyka = new question ('Co nie jest gatunkiem muzycznym',['1.Triphop','2. Beatdrop','3.Elektronika'], '2. Beatdrop');
 
 var zestawPytan =[kosmos, hacking, muzyka];
-
 
 question.prototype.odpowiedzUzytkownika =function(){
   console.log(this.pytanie, this.odpowiedz);
 };
 
-question.prototype.losowaLiczba = function(a){
+question.prototype.losowaLiczba = function(){
   a = Math.floor(Math.random()*3);
   return a;
 };
 
 question.prototype.wylosowanePytanie = function(){
-    zestawPytan[this.losowaLiczba()].odpowiedzUzytkownika();
+    var hex = zestawPytan[this.losowaLiczba()];
+    return hex;
 };
 
-var yup = new question();
-yup.wylosowanePytanie();
+question.prototype.wynik = function (){
+  if (this.zbyszek.poprawnaOdpowiedz === this.zbyszek.odpowiedz[rozwiazanie] ){
+    console.log('No brawo')
+  }else{
+    console.log('Niestety')
 
-if()
+  }
+};
+
+question.prototype.zbyszek ;
+
+var yup = new question();
+yup.zbyszek = yup.wylosowanePytanie();
+yup.zbyszek = yup.odpowiedzUzytkownika();
+var rozwiazanie = prompt('Wybierz prawidłową odpowiedz');
+
+yup.wynik();
+
+
+
+
+
+
+
+
+
+
 
 
 //var wylosowanePytanie = zestawPytan[Math.floor(Math.random()*3)].odpowiedzUzytkownika();
 //var odpowiedzNaPytanie =prompt('Wybierz prawidlowa odpowiedz');
 
-//if(odpowiedzNaPytanie === wylosowane )
-//console.log(wylosowanePytanie);
 
 
 
