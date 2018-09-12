@@ -28,7 +28,7 @@ question.prototype.wylosowanePytanie = function(){
 };
 
 question.prototype.wynik = function (){
-  if (this.zbyszek.poprawnaOdpowiedz === this.zbyszek.odpowiedz[rozwiazanie] ){
+  if (this.zbyszek.poprawnaOdpowiedz === this.zbyszek.odpowiedz[rozwiazanie-1] ){
     console.log('No brawo')
   }else{
     console.log('Niestety')
@@ -40,9 +40,8 @@ question.prototype.zbyszek ;
 
 var yup = new question();
 yup.zbyszek = yup.wylosowanePytanie();
-yup.zbyszek = yup.odpowiedzUzytkownika();
+yup.zbyszek.odpowiedzUzytkownika();
 var rozwiazanie = prompt('Wybierz prawidłową odpowiedz');
-
 yup.wynik();
 
 
